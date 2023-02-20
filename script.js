@@ -8,14 +8,14 @@ function setColor() {
     bgColor.classList.add("online")
 } 
 
-async function connectionStatus(){
+async function connectionStatus() {
     try {
-        const fetchResult = await fetch ('https://www.sausagedogworld.com/wp-content/uploads/2021/05/fluffy-wire-haired-dachshund.jpg' + (new Date()).getTime());
-        image.src = "./images/online.png";
-        setColor();
-        return fetchResult.status >= 200 && fetchResult.status >= 300; 
-    } catch(err) {
-        // console.log(err);
+      const fetchResult = await fetch('https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Lenna_%28test_image%29.png/440px-Lenna_%28test_image%29.png?time=' + (new Date()).getTime());
+      image.src = "./images/online.png";
+      setColor();
+    return fetchResult.status >= 200 && fetchResult.status < 300;
+  } catch (error) {
+    console.error(error);
         statusDisplay.textContent = "OOPS, There's no connection!"
         image.src = "./images/offline.png";
         bgColor.classList.remove("online")
