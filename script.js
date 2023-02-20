@@ -40,3 +40,5 @@ window.addEventListener("load", async (event) => {
     }
 
 })
+
+// After completeing the code along, my application still didn't work. I'll be going through the code line by line to find my error. 02/20/23
